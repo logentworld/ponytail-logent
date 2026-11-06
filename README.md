@@ -1,231 +1,92 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.png">
-    <img src="assets/logo.png" width="220" alt="Ponytail, the lazy senior dev">
-  </picture>
-</p>
+# ponytail-logent
 
-<h1 align="center">Ponytail</h1>
+Logent용 독립 플러그인이에요. 원본 [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)의
+ponytail 스킬 본문과 `/ponytail` 명령을 코어에 내장하지 않고 `.lpg` 플러그인 하나로 제공해요.
 
-<p align="center">
-  <em>He says nothing. He writes one line. It works.</em>
-</p>
+- 플러그인 ID: `dev.logent.ponytail`
+- 진입 클래스: `dev.logent.ponytail.PonytailPlugin`
+- 플러그인 API: `dev.logent:logent-plugin-api:3.3.0`
+- 저장소: https://github.com/logentworld/ponytail-logent (원본 포크)
+- 원본 버전: v5.3.3 · 커밋 `96608e078b2d5ea607c5c3b8b5a54d1c1fba6846`
 
-<p align="center">
-  <a href="https://trendshift.io/repositories/50668?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-50668" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/50668" alt="DietrichGebert%2Fponytail | Trendshift" width="250" height="55"/></a>
-</p>
+## 무엇을 해요
 
-<p align="center">
-  <img src="https://img.shields.io/github/stars/DietrichGebert/ponytail?style=flat-square&color=111111&label=stars" alt="Stars">
-  <img src="https://img.shields.io/github/v/release/DietrichGebert/ponytail?style=flat-square&color=111111&label=release" alt="Release">
-  <img src="https://img.shields.io/npm/v/@dietrichgebert/ponytail?style=flat-square&color=111111&label=npm" alt="npm">
-  <img src="https://img.shields.io/badge/works%20with-20%20agents-111111?style=flat-square" alt="Works with 20 agents">
-  <img src="https://img.shields.io/badge/license-MIT-111111?style=flat-square" alt="MIT license">
-</p>
+- 게으른 시니어 개발자 모드인 ponytail 규칙을 시스템 프롬프트에 주입해요.
+- `/ponytail` 슬래시 명령으로 대화별 on/off와 review·audit 실행을 맡아요.
+- 원본 스킬 6개(`ponytail`, `ponytail-review`, `ponytail-audit`, `ponytail-debt`, `ponytail-gain`,
+  `ponytail-help`)를 읽기 전용 스킬로 노출해요.
 
-<p align="center">
-  <a href="https://ponytail.dev/stories"><img src="assets/stories-banner.png" alt="Using Ponytail at work? Tell us your story" width="760"></a>
-</p>
+## 명령
 
-<p align="center">
-  <a href="https://trendshift.io/repositories/50668" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/50668/daily" alt="DietrichGebert/ponytail | Trendshift" width="250" height="55"/></a>
-  <a href="https://trendshift.io/repositories/50668" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/50668/weekly" alt="DietrichGebert/ponytail | Trendshift" width="250" height="55"/></a>
-  <a href="https://trendshift.io/repositories/50668?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-50668" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/50668/monthly?language=JavaScript" alt="DietrichGebert%2Fponytail | Trendshift monthly ranking" width="250" height="55"/></a>
-</p>
-
-<p align="center">
-  <img src="assets/v5/hero.jpg" width="880" alt="Ponytail 5, rebuilt from the ground up: -53% code, -41% time, -26% cost, -45% tokens. And yet 98% of risky logic ships with a test, without Ponytail 68%.">
-</p>
-
-<p align="center">
-  <strong>Ponytail 5: rebuilt from the ground up.</strong><br>
-  <strong>-53% code &middot; -41% time &middot; -26% cost &middot; -45% tokens</strong><br>
-  <strong>And yet: 98% of risky logic ships with a test.</strong> Without Ponytail: 68%.<br>
-  <sub>Benchmarked in Claude Code, the same agent with and without the skill: 39 tasks including a real FastAPI + React repo, Opus 5.5, 5 runs each. <a href="#numbers">Details</a>.</sub>
-</p>
-
-<p align="center">
-  <sub><a href="i18n/README.es.md">Español</a> &middot; <a href="i18n/README.ko.md">한국어</a> &middot; <a href="i18n/README.zh-CN.md">简体中文</a> &middot; <a href="i18n/README.ja.md">日本語</a></sub>
-</p>
-
----
-
-<p align="center">
-  <a href="https://ponytail.dev/soon"><img src="assets/waitlist-banner.png" alt="Something's coming, join the waitlist" width="760"></a>
-</p>
-
-## Already built with Ponytail
-
-<a href="https://theretriever.app">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/retriever-logo-dark.svg">
-    <img src="assets/retriever-logo-light.svg" height="128" alt="Retriever">
-  </picture>
-</a>
-<a href="https://photoreunion.app/?ref=ponytail-gh">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/photoreunion-logo-dark.svg">
-    <img src="assets/photoreunion-logo-light.svg" height="128" alt="PhotoReunion">
-  </picture>
-</a>
-
----
-
-You know him. Long ponytail. Oval glasses. Has been at the company longer than the version control. You show him fifty lines; he looks at them, says nothing, and replaces them with one.
-
-Ponytail puts him inside your AI agent.
-
-## Numbers
-
-<p align="center">
-  <img src="assets/v5/chart.png" width="880" alt="Share of the no-skill baseline. Lines of code: Ponytail v4.13 52%, Ponytail 5 47%. Output tokens: 57% and 55%. Cost: 84% and 74%. Time: 62% and 59%.">
-</p>
-
-<p align="center">
-  <img src="assets/v5/tests.png" width="880" alt="Half the code, and yet better: 98% of risky logic ships with a test (no skill 68%); the agent's own tests catch 66% of injected bugs (no skill 46%).">
-</p>
-
-Two things the chart does not show: in a blind comparison, Ponytail 5's replies beat the previous Ponytail's 110 to 67. And on the six security tasks (SQL injection, path traversal, forged tokens, rate limiting, malformed CSV rows, caching) it passed all 30 runs: less code, no less safe. Method, per-task tables and limits: [benchmarks/results/2026-10-07-agentic.md](benchmarks/results/2026-10-07-agentic.md).
-
-**The rule was never "fewest tokens."** It is: write only what the task needs, and never cut validation, error handling, security, or accessibility. The code ends up small because it is necessary, not golfed. Lower cost and latency are a side effect.
-
-## Before / after
-
-<p align="center">
-  <img src="assets/v5/beforeafter.png" width="880" alt="Add a date picker to the frontend. No skill: 335 lines, a calendar and a date picker built by hand. Ponytail 5: one 10-line file that reuses the repo's Input with type date, so the browser brings the calendar.">
-</p>
-
-You ask for a date picker. Without Ponytail, the agent installs a date picker library or builds a whole calendar by hand: 335 lines. Ponytail 5 first looks at what is already there: the repo has an `Input` component, and every browser has a date picker. It puts the two together. 10 lines.
-
-More survivors in [examples/](examples/).
-
-## The review, rebuilt
-
-<p align="center">
-  <img src="assets/v5/review.png" width="880" alt="The review, rebuilt. A real /ponytail-review finding from the benchmark: the change renamed a field, and an untouched file, src/routes/feed.js, now crashes. Must fix: the Atom feed now crashes on every request, with what this is, the problem, the fix, and what happens if we skip it. 100% of planted problems found, no skill 87%. 100% of problems outside the diff found, no skill 78%.">
-</p>
-
-`/ponytail-review` used to look only for code to cut. Now it reviews like the senior dev who gets paged when it breaks: it reads the code your change touches, not just the diff, and checks bugs, security, real load, missing tests, speed, and what to cut. Each finding says what the code does, what goes wrong, how to fix it, and what happens if you don't.
-
-## The audit, rebuilt
-
-<p align="center">
-  <img src="assets/v5/audit.png" width="880" alt="Your whole repo, ranked. Fix this first. A real /ponytail-audit from the benchmark on a warehouse stock repo: 1 must fix, office batches with 1,200 fail completely; 2 must fix, the import silently skips bad rows; 3 must fix, a mistyped SKU in an office batch is silently ignored; 4 should fix, the risky code paths have no tests; 5 nice to have, the API crashes on a body that isn't an object. Verdict: fix 1 first.">
-</p>
-
-`/ponytail-audit` runs the same checks on the whole repo. It maps the code first: entry points, how data moves, what load the project expects. Then it ranks what it finds and tells you what to fix first. The old audit only listed what to delete.
-
-## New in 5.3: the band
-
-<p align="center">
-  <img src="assets/band/band.png" width="880" alt="The ponytail band in Claude Code, above the prompt. Detail mode: cost $23.80, last turn $1.14, average $0.72 per turn; 56.7M tokens, 168k output, 33 turns; agent time 52m 14s; reuse 71%, 5 used, 2 new; tests passed after the last change. Compact mode shows the same in one line.">
-</p>
-
-In Claude Code, ponytail now shows a band above the prompt: what the current task costs, how many tokens and how much agent time it used, how often it reused existing code instead of writing new code, and whether the tests passed after the last change. Its buttons switch the level, run `/ponytail-review` or `/ponytail-audit`, copy the task as Markdown, and fold the band into one line. Don't want it? `/ponytail band` hides it, the same command brings it back. Needs Claude Code 2.1.290 or later, in the terminal or the desktop app. It does not show in the VS Code chat panel, cloud sessions or `claude -p`.
-
-<p align="center">
-  <img src="assets/band/board.png" width="880" alt="The ponytail board, a local page: 61 sessions, 20h 13m agent time, $285.30 and 492.5M tokens in the last 30 days; agent time per project over time; the latest sessions with their tests; active days and streak.">
-</p>
-
-**Board** opens a local page with every task across your projects: cost, agent time and tokens over time, every session with its tests, and the days you worked. By default, everything stays on your machine, in `~/.config/ponytail/band/`. `/ponytail band import` adds your past Claude Code sessions to it, with their cost, agent time and tokens.
-
-## How it works
-
-<p align="center">
-  <img src="assets/v5/ladder.png" width="880" alt="Before writing code, stop at the first rung that holds: 1 does this need to exist, 2 already in this codebase, 3 does the standard library do it, 4 a native platform feature, 5 an installed dependency, 6 can it be one line, 7 only then the minimum that works, plus one small test if it has logic.">
-</p>
-
-The ladder runs *after* it understands the problem, not instead of it: it reads the code the change touches and traces the real flow before picking a rung. Lazy about the solution, never about reading.
-
-Lazy, not negligent: trust-boundary validation, data-loss handling, security, and accessibility are never on the chopping block.
-
-Logic with a branch, a loop, a parser, money or security leaves one small test behind. Every reply ends with what was skipped or not checked and any risk you should know.
-
-## The prompt
-
-Ponytail is one prompt: [`skills/ponytail/SKILL.md`](skills/ponytail/SKILL.md). The compact version, for agents that read a rules file, is [`AGENTS.md`](AGENTS.md). Everything else in this repo loads that prompt into different agents.
-
-## Install
-
-**Claude Code**, as two separate prompts:
-
-```
-/plugin marketplace add DietrichGebert/ponytail
-```
-```
-/plugin install ponytail@ponytail
+```text
+/ponytail on       Ponytail 모드를 켜고 enabled 설정을 저장해요.
+/ponytail off      Ponytail 모드를 끄고 enabled 설정을 저장해요.
+/ponytail review   ponytail-review 스킬을 읽고 현재 변경을 검토해요.
+/ponytail audit    ponytail-audit 스킬을 읽고 저장소 전체를 감사해요.
+/ponytail          현재 대화의 상태와 사용법을 보여 줘요.
 ```
 
-**Codex:**
+인자 비교는 기존 코어와 같이 소문자 기준이며, 그 밖의 값은 상태 안내로 처리해요.
+review·audit은 현재 대화에서 모드를 켠 뒤 `skill` 도구로 해당 스킬을 읽으라는 프롬프트를 모델에 보내요.
+
+## 설정
+
+| 키 | 종류 | 기본값 | 설명 |
+|----|------|--------|------|
+| `enabled` | BOOLEAN | `false` | Ponytail 규칙을 기본으로 적용해요. |
+
+`/ponytail on|off`는 `enabled` 설정을 `PluginHost.writeSetting`으로 영구 저장하고 현재
+대화에도 즉시 적용해요. 저장에 실패하면 오류를 알려 주고 모드를 바꾸지 않아요.
+`/ponytail review|audit`은 설정을 바꾸지 않고 현재 대화에만 규칙을 켜며, 대화가 바뀌거나
+초기화되면 그 재정의는 지워져요.
+
+## 동작 계약
+
+- `PluginHooks.systemPrompt`는 Ponytail이 켜진 대화에서만
+  `plugins/ponytail/skills/ponytail/rules.md`를 시스템 프롬프트 끝에 덧붙여요.
+  자산을 읽지 못하면 원래 프롬프트를 그대로 돌려줘요.
+- `PluginHooks.sessionStart`는 다른 대화의 재정의를 정리하고,
+  `PluginHooks.sessionReset`과 `onSessionReset`은 모든 재정의를 지워요.
+- `promptSection`은 항상 켜져 있는 짧은 안내예요. 최소 구현 규칙과 review·audit 사용법만
+  알려 주고, 실제 규칙 본문은 모드가 켜졌을 때만 주입해요.
+- 활성 상태는 `enabled` 설정과 대화별 재정의만으로 판단해요. 코어의 옛 `ponytail` 훅
+  플래그는 쓰지 않아요. 대화 재정의가 있으면 설정보다 우선해요.
+
+## 자산 구조
+
+```text
+plugin/src/main/assets/plugins/ponytail/skills/ponytail/
+├── SKILL.md      # ponytail
+├── review.md     # ponytail-review
+├── audit.md      # ponytail-audit
+├── debt.md       # ponytail-debt
+├── gain.md       # ponytail-gain
+├── help.md       # ponytail-help
+├── rules.md      # 시스템 프롬프트에 주입하는 규칙
+└── LICENSE       # 원본 MIT 라이선스
+```
+
+원본 저장소의 디렉터리 구조(`skills/ponytail*/SKILL.md`)는 `README.upstream.md`와 함께
+포크 이력에 그대로 보존돼 있어요. 이 플러그인의 자산은 Logent가 평평한 경로로 옮긴
+사본이며, 본문은 번역·편집하지 않았어요. frontmatter의 한 줄 설명과 `homepage`·`license`는
+Logent 사본 형식이에요.
+
+## 빌드와 검증
+
+Gradle 래퍼와 플러그인 API pin을 저장소에 고정했어요. `GITHUB_ACTOR`와 `GITHUB_TOKEN`
+(`read:packages`)은 환경 변수로만 넘겨요.
 
 ```bash
-codex plugin marketplace add DietrichGebert/ponytail
-codex plugin add ponytail@ponytail
+# JVM 단위 테스트와 lint
+./scripts/test.sh
+
+# 서명된 .lpg와 보조 AAR·자산 원본 ZIP
+LOGENT_PLUGIN_SIGNING_KEY_FILE=/secure/plugin-key.pem ./scripts/build.sh
 ```
 
-Then open `/hooks` in Codex, trust its two lifecycle hooks, and start a new thread.
+## 라이선스
 
-**Any other agent:** copy [`AGENTS.md`](AGENTS.md) into your project, or ask your agent to install [`skills/ponytail/SKILL.md`](skills/ponytail/SKILL.md) as a skill. Step by step for Copilot, Cursor, OpenCode, Gemini and the rest: **[INSTALL.md](INSTALL.md)**.
-
-That was it. He'd be proud. He won't say it.
-
-Active every session, with a handful of commands (see [Commands](#commands)). `/ponytail ultra` exists for when the codebase has wronged you personally. Startup and mode-change text shows the current mode.
-
-Only install ponytail from `DietrichGebert/ponytail` on GitHub or `@dietrichgebert/ponytail` on npm. It never ships `.exe` or `.dll` files; a copy that does is not mine.
-
-## Commands
-
-| Command | What it does |
-|---------|--------------|
-| `/ponytail [lite \| full \| ultra \| off]` | Set the intensity, or turn it off. No argument switches ponytail on at the default level if it is off, and otherwise reports the current level. |
-| `/ponytail band [on \| off]` | Claude Code only: hide or show the band above the prompt. No argument switches it. The level stays. |
-| `/ponytail band import` | Claude Code only: add your past Claude Code sessions to the board, with their cost, agent time and tokens. |
-| `/ponytail-review` | Review the current diff like the senior dev who gets paged when it breaks: bugs, security, real load, risky code without a test, slow paths, and what to cut. Each finding says what the code does, what goes wrong, how to fix it, and what happens if you don't. Name a target in plain words to narrow or widen it: `uncommitted`, `staged`, `branch`, or a PR link. |
-| `/ponytail-audit` | The same check for the whole repo, most important first. |
-| `/ponytail-debt` | Harvest the `shortcut:` comments you've deferred into a ledger, so "later" doesn't become "never". |
-| `/ponytail-gain` | Show the measured impact scoreboard (less code, less cost, more speed) from the benchmark. |
-| `/ponytail-help` | Quick reference for the commands above. |
-
-Commands need a skill-capable host (Claude Code, Codex, Devin CLI, OpenCode, Gemini, Antigravity CLI, pi, Hermes Agent, Qoder, Grok Build). In Codex CLI and the IDE extension they're skills under the plugin's namespace; invoke with `$ponytail:ponytail-review`. Cursor with the [hooks](INSTALL.md#cursor) gets `/ponytail` level switching only, typed as a plain message. The instruction-only adapters (Cursor's rule file, Windsurf, Cline, Copilot, Kiro, Antigravity's `AGENTS.md` fallback) load the always-on ruleset without the commands.
-
-## FAQ
-
-**Does it need a config file?**
-No. An optional `~/.config/ponytail/config.json` or `PONYTAIL_DEFAULT_MODE` env var can set the default level, but nothing is required.
-
-**Why does it write `shortcut:` comments?**
-They mark a deliberate shortcut and when to revisit it, and `/ponytail-debt` collects them into a ledger. Want another word, or none? Say so in your project's `CLAUDE.md` or `AGENTS.md`, then run `/ponytail-debt <your word>`.
-
-**What if I really need the 120-line cache class?**
-You don't. Insist anyway and he'll build it. Slowly. Correctly. While looking at you.
-
-**Does it scale?**
-The code you never wrote scales infinitely. Zero bugs, zero CVEs, 100% uptime since forever.
-
-**Why "ponytail"?**
-You know exactly why.
-
-## Sponsors
-
-<p align="center">
-  <a href="https://greenpt.com/">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/logo-greenpt-dark.svg">
-      <img src="assets/logo-greenpt.svg" width="260" alt="GreenPT">
-    </picture>
-  </a>
-</p>
-
-## License
-
-[MIT](LICENSE). The shortest license that works.
-
-## Star History
-
-<a href="https://www.star-history.com/dietrichgebert/ponytail#history">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=DietrichGebert/ponytail&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=DietrichGebert/ponytail&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=DietrichGebert/ponytail&type=Date" />
- </picture>
-</a>
+- Kotlin 플러그인 코드: GPL-3.0 (`plugin/LICENSE`)
+- 원본 ponytail 스킬과 문서: MIT, Copyright (c) 2026 DietrichGebert (`LICENSE`,
+  `plugin/src/main/assets/plugins/ponytail/skills/ponytail/LICENSE`)
+- 출처와 변경 내역: [`NOTICE`](NOTICE)

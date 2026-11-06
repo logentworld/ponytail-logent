@@ -28,3 +28,14 @@ benchmarks/agentic/fixtures/
 # Claude Code writes these when it loads the band's hooks module from this folder
 .claude-plugin/types/
 /tsconfig.json
+
+# Logent 플러그인 빌드 산출물
+.gradle/
+.kotlin/
+build/
+local.properties
+*.iml
+.idea/
+.DS_Store
+captures/
+*.pyc
