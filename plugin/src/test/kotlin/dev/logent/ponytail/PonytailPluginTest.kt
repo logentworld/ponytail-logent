@@ -10,6 +10,7 @@ import java.nio.file.Files
 import java.nio.file.Path
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -92,14 +93,14 @@ class PonytailPluginTest {
     }
 
     @Test
-    fun `promptSection은 최소 구현 규칙과 review·audit 안내를 담는다`() {
+    fun `promptSection은 모드 명령과 review·audit 안내만 담는다`() {
         val section = requireNotNull(PonytailPlugin().promptSection())
         assertTrue(section.contains("/ponytail on"))
         assertTrue(section.contains("/ponytail off"))
-        assertTrue(section.contains("표준 라이브러리"))
         assertTrue(section.contains("/ponytail review"))
         assertTrue(section.contains("/ponytail audit"))
-        assertTrue(section.contains("file:line"))
+        assertFalse(section.contains("표준 라이브러리"))
+        assertFalse(section.contains("file:line"))
         assertTrue(section.length <= 12_000)
     }
 

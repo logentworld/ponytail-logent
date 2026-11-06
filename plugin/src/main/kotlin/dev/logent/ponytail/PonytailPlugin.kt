@@ -40,9 +40,9 @@ class PonytailPlugin : LogentPlugin {
     )
 
     override fun promptSection(): String = """
-        Ponytail 플러그인: 최소 구현 규칙은 /ponytail on, 해제는 /ponytail off예요. 기본값은 꺼짐이에요.
-        활성 상태에서는 새 추상화·옵션·설정·의존성을 만들기 전에 기존 코드·표준 라이브러리·설치된 의존성으로 해결하세요. 요청받지 않은 기능은 만들지 말고, 변경이 닿는 호출자·테스트·픽스처까지 끝내세요. 입력 검증·오류 처리·보안·접근성은 줄이지 마세요.
-        변경 diff의 품질 검토는 /ponytail review, 저장소 전체 감사는 /ponytail audit로 시작하세요. 각 지적에는 근거(file:line), 가장 작은 수정, 건너뛸 위험을 붙이세요.
+        Ponytail 플러그인: 모드 켜기는 /ponytail on, 끄기는 /ponytail off예요. 기본값은 꺼짐이에요.
+        모드가 켜져 있으면 플러그인이 ponytail 규칙을 시스템 프롬프트에 붙여요.
+        변경 diff의 품질 검토는 /ponytail review, 저장소 전체 감사는 /ponytail audit로 시작하세요.
     """.trimIndent()
 
     override fun slashCommands(): List<PluginSlashCommand> = listOf(
