@@ -1,0 +1,9 @@
+{
+  "id": "com.sleepysoong.logent.ponytail",
+  "key": "sleepysoong:ponytail",
+  "name": "Ponytail",
+  "entry": "com.sleepysoong.logent.ponytail.PonytailPlugin",
+  "dependencies": [],
+  "apiMin": 4,
+  "apiMax": 4
+}

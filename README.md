@@ -9,6 +9,12 @@ ponytail 스킬 본문과 `/ponytail` 명령을 코어에 내장하지 않고 `.
 - 저장소: https://github.com/logentworld/ponytail-logent (원본 포크)
 - 원본 버전: v5.3.3 · 커밋 `96608e078b2d5ea607c5c3b8b5a54d1c1fba6846`
 
+`logent-plugin.json`을 `scripts/plugin-pack.py build --definition logent-plugin.json`의
+공통 정의로 사용해요. 플러그인 key는 `sleepysoong:ponytail`, `dependencies`는 `[]`예요.
+`sleepysoong`는 명시한 publisher 별칭이며 GitHub 인증 계정이나 소유권을 뜻하지 않아요.
+key와 의존성에서 생성한 manifest의 `requires`는 서명 metadata에 포함되고,
+`content-public-key.der.b64`에 고정한 공개키로 서명과 파일 해시를 검증해요.
+
 ## 무엇을 해요
 
 - 게으른 시니어 개발자 모드인 ponytail 규칙을 시스템 프롬프트에 주입해요.
