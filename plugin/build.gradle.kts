@@ -14,7 +14,7 @@ val apiPin = Properties().apply {
 }
 
 android {
-    namespace = "dev.logent.ponytail"
+    namespace = "com.sleepysoong.logent.ponytail"
     compileSdk = 37
 
     defaultConfig {

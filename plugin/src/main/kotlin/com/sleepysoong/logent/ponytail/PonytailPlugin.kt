@@ -1,15 +1,15 @@
-package dev.logent.ponytail
+package com.sleepysoong.logent.ponytail
 
-import dev.logent.plugin.LogentPlugin
-import dev.logent.plugin.PluginHookContext
-import dev.logent.plugin.PluginHooks
-import dev.logent.plugin.PluginHost
-import dev.logent.plugin.PluginSetting
-import dev.logent.plugin.PluginSettingKind
-import dev.logent.plugin.PluginSkill
-import dev.logent.plugin.PluginSlashCommand
-import dev.logent.plugin.PluginSlashContext
-import dev.logent.plugin.PluginSlashResult
+import com.sleepysoong.logent.plugin.LogentPlugin
+import com.sleepysoong.logent.plugin.PluginHookContext
+import com.sleepysoong.logent.plugin.PluginHooks
+import com.sleepysoong.logent.plugin.PluginHost
+import com.sleepysoong.logent.plugin.PluginSetting
+import com.sleepysoong.logent.plugin.PluginSettingKind
+import com.sleepysoong.logent.plugin.PluginSkill
+import com.sleepysoong.logent.plugin.PluginSlashCommand
+import com.sleepysoong.logent.plugin.PluginSlashContext
+import com.sleepysoong.logent.plugin.PluginSlashResult
 import java.util.concurrent.ConcurrentHashMap
 
 /**
@@ -20,7 +20,7 @@ import java.util.concurrent.ConcurrentHashMap
  * 새 대화부터 기본으로 적용되고, 규칙 본문은 활성 대화의 시스템 프롬프트에만 붙어요.
  */
 class PonytailPlugin : LogentPlugin {
-    override val id: String = "dev.logent.ponytail"
+    override val id: String = "com.sleepysoong.logent.ponytail"
     override val name: String = "Ponytail"
     override val version: String = BuildConfig.PLUGIN_VERSION
 

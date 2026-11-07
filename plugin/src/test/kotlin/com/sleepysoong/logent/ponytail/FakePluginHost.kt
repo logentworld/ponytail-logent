@@ -1,7 +1,7 @@
-package dev.logent.ponytail
+package com.sleepysoong.logent.ponytail
 
-import dev.logent.plugin.PluginHost
-import dev.logent.plugin.ProcessResult
+import com.sleepysoong.logent.plugin.PluginHost
+import com.sleepysoong.logent.plugin.ProcessResult
 
 /** 플러그인 테스트가 자산·설정 계약만 검증하도록 Android 의존성을 대신해요. */
 internal class FakePluginHost(

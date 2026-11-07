@@ -11,7 +11,7 @@
 
 - 원본 저장소의 전체 이력과 파일은 그대로 보존했어요. 원본 루트 README는
   `README.upstream.md`로 옮기고, 이 저장소의 루트 README는 Logent 플러그인 안내로 바꿨어요.
-- `plugin/` 모듈에 `dev.logent.ponytail` Kotlin 플러그인을 추가했어요. 이 코드는 GPL-3.0
+- `plugin/` 모듈에 `com.sleepysoong.logent.ponytail` Kotlin 플러그인을 추가했어요. 이 코드는 GPL-3.0
   (`plugin/LICENSE`)이며 원본 스킬에는 적용되지 않아요.
 - 스킬 본문은 Logent 코어 `skills/ponytail` 사본(logent-skills 자산)을
   `plugin/src/main/assets/plugins/ponytail/skills/ponytail/`로 옮겼어요. 본문은 번역하거나

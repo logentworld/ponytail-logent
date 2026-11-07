@@ -3,9 +3,9 @@
 Logent용 독립 플러그인이에요. 원본 [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)의
 ponytail 스킬 본문과 `/ponytail` 명령을 코어에 내장하지 않고 `.lpg` 플러그인 하나로 제공해요.
 
-- 플러그인 ID: `dev.logent.ponytail`
-- 진입 클래스: `dev.logent.ponytail.PonytailPlugin`
-- 플러그인 API: `dev.logent:logent-plugin-api:3.3.0`
+- 플러그인 ID: `com.sleepysoong.logent.ponytail`
+- 진입 클래스: `com.sleepysoong.logent.ponytail.PonytailPlugin`
+- 플러그인 API: `com.sleepysoong.logent:logent-plugin-api:4.0.0`
 - 저장소: https://github.com/logentworld/ponytail-logent (원본 포크)
 - 원본 버전: v5.3.3 · 커밋 `96608e078b2d5ea607c5c3b8b5a54d1c1fba6846`
 

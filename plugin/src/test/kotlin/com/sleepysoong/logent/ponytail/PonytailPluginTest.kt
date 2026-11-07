@@ -1,11 +1,11 @@
-package dev.logent.ponytail
+package com.sleepysoong.logent.ponytail
 
-import dev.logent.plugin.PluginHookContext
-import dev.logent.plugin.PluginHost
-import dev.logent.plugin.PluginSettingKind
-import dev.logent.plugin.PluginSlashContext
-import dev.logent.plugin.PluginSlashResult
-import dev.logent.plugin.ToolResult
+import com.sleepysoong.logent.plugin.PluginHookContext
+import com.sleepysoong.logent.plugin.PluginHost
+import com.sleepysoong.logent.plugin.PluginSettingKind
+import com.sleepysoong.logent.plugin.PluginSlashContext
+import com.sleepysoong.logent.plugin.PluginSlashResult
+import com.sleepysoong.logent.plugin.ToolResult
 import java.nio.file.Files
 import java.nio.file.Path
 import kotlinx.coroutines.runBlocking
@@ -36,10 +36,10 @@ class PonytailPluginTest {
     @Test
     fun `플러그인 계약은 ponytail 스킬 6개를 원본 자산 경로로 노출한다`() {
         val plugin = PonytailPlugin()
-        assertEquals("dev.logent.ponytail", plugin.id)
+        assertEquals("com.sleepysoong.logent.ponytail", plugin.id)
         assertEquals("Ponytail", plugin.name)
         assertEquals(BuildConfig.PLUGIN_VERSION, plugin.version)
-        assertEquals(3, plugin.apiVersion)
+        assertEquals(4, plugin.apiVersion)
 
         val skills = plugin.skills()
         assertEquals(skillFiles.keys.toList(), skills.map { it.name })
