@@ -12,8 +12,7 @@ ponytail 스킬 본문과 `/ponytail` 명령을 코어에 내장하지 않고 `.
 `logent-plugin.json`을 `scripts/plugin-pack.py build --definition logent-plugin.json`의
 공통 정의로 사용해요. 플러그인 key는 `sleepysoong:ponytail`, `dependencies`는 `[]`예요.
 `sleepysoong`는 명시한 publisher 별칭이며 GitHub 인증 계정이나 소유권을 뜻하지 않아요.
-key와 의존성에서 생성한 manifest의 `requires`는 서명 metadata에 포함되고,
-`content-public-key.der.b64`에 고정한 공개키로 서명과 파일 해시를 검증해요.
+key와 의존성에서 생성한 manifest의 `requires`가 `.lpg`에 함께 들어가요.
 
 ## 무엇을 해요
 
@@ -86,8 +85,8 @@ Gradle 래퍼와 플러그인 API pin을 저장소에 고정했어요. `GITHUB_A
 # JVM 단위 테스트와 lint
 ./scripts/test.sh
 
-# 서명된 .lpg와 보조 AAR·자산 원본 ZIP
-LOGENT_PLUGIN_SIGNING_KEY_FILE=/secure/plugin-key.pem ./scripts/build.sh
+# .lpg 패키지
+./scripts/build.sh
 ```
 
 ## 라이선스
